@@ -20,3 +20,5 @@
       invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
   6.  将libSaber、libArcher这2个文件放入游戏目录assets文件夹内
   7.  编译游戏文件夹，生成直装包
+
+* 食用亲手做出来的直装包不是一般的香
