@@ -8,8 +8,8 @@
 3. 不夹带私货（比如 广告）
 
 ## 食用方法
-详情见tutorial.docx
--大致流程
+详情见 tutorial.docx
+
   1.  反编译游戏apk，生成对应文件夹
   2.  添加悬浮权限	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
   3.  添加悬浮窗服务	<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/>
