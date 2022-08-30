@@ -9,3 +9,11 @@
 
 ## 食用方法
 详情见tutorial.docx
+-大致流程
+  1.  反编译游戏apk，生成对应文件夹
+  2.  添加悬浮权限	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  3.  添加悬浮窗服务	<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/>
+  4.  将com\android\support里的所有smali文件放入游戏文件夹中的android\support
+  5.  打开com\miHoYo\overridenativeactivity\OverrideNativeActivity.smali，找到onCreate方法，在方法开头插入invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
+  6.  将libSaber、libArcher这2个文件放入游戏目录assets文件夹内
+  7.  编译游戏文件夹，生成直装包
