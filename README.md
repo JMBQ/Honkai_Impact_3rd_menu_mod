@@ -1,4 +1,4 @@
-# cheat_mod
+# Honkai Impact 3 mod
 
 针对 崩坏3rd 的悬浮菜单mod
 
