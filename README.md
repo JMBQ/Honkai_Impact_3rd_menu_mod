@@ -14,6 +14,7 @@
 
   1.  反编译游戏apk，生成对应文件夹
   2.  添加悬浮权限	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  ![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/01.png)
   3.  添加悬浮窗服务	<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/>
   4.  将com\android\support里的所有smali文件放入游戏文件夹中的android\support
   5.  打开com\miHoYo\overridenativeactivity\OverrideNativeActivity.smali，找到onCreate方法，在方法开头插入
