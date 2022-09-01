@@ -10,10 +10,9 @@
 5. 不夹带私货（比如 广告）
 
 ## 食用方法
-详情见 tutorial.docx
 
 * 反编译游戏apk，生成对应文件夹
-* 添加悬浮权限	
+* 添加悬浮窗权限
 <br>\<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/\></br>
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/01.png)</br>
 * 添加悬浮窗服务	
