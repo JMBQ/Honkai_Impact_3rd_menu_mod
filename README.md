@@ -12,6 +12,8 @@
 
 ## 食用方法
 
+* 看不懂的话，直接看video，内有PC+安卓视频教程
+
 * 反编译游戏apk，生成对应文件夹
 * 添加悬浮窗权限
 <br>\<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/\></br>
