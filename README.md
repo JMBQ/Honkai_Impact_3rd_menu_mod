@@ -16,15 +16,21 @@
 
 * 反编译游戏apk，生成对应文件夹
 * 添加悬浮窗权限
-<br>\<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/\></br>
+```
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+```
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/01.png)</br>
 * 添加悬浮窗服务	
-</br>\<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/\></br>
+```
+<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/>
+```
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/02.png)</br>
 * 将com\android\support里的所有smali文件放入游戏文件夹中的android\support
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/03.png)</br>
 * 打开com\miHoYo\overridenativeactivity\OverrideNativeActivity.smali，找到onCreate方法，在方法开头插入
-<br>invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V</br>
+```
+invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
+```
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/04.png)</br>
 * 将libSaber、libArcher这2个文件放入游戏目录assets文件夹内
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/05.png)</br>
