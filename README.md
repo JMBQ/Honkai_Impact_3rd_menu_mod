@@ -22,7 +22,7 @@
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/01.png)</br>
 * 添加悬浮窗服务	
 ```
-<service		android:name="com.android.support.Launcher"		android:enabled="true" 	android:exported="false" 	android:stopWithTask="true"/>
+<service android:name="com.android.support.Launcher" android:enabled="true" android:exported="false" android:stopWithTask="true"/>
 ```
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/02.png)</br>
 * 将com\android\support里的所有smali文件放入游戏文件夹中的android\support
