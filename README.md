@@ -4,7 +4,7 @@
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/06.jpg)</br>
    
 ## 特点
-1. 只适用于国外区服（sea, globle, JP, KR, TW）
+1. 只适用于国外区服（sea, globle, JP, KR, TW）, 国服玩家直接看最后
 2. 动态抓取offset，故适用于当前及以后的任意游戏版本
 3. 适配arm64-v8a、armeabi-v7a
 4. 适用于安卓手机(推荐)、安卓模拟器
@@ -51,3 +51,7 @@ invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)
   * 连续多次出现刚打开就闪退 属于不正常现象，检查是否存在错误操作
 * 游戏中途正常情况下不会闪退、卡住
 * 如果出现游戏卡住，但悬浮菜单可以正常移动及操作，这种情况是触发了mod自身运行环境检测，mod主动击溃游戏进程
+
+## 国服玩家注意
+* 该mod不适合国服(有签名校验)
+* 如果你手机已解锁，可以使用 [U.R.C](https://github.com/JMBQ/URC)，通杀所有服务器
