@@ -4,7 +4,7 @@
 <br>![image](https://github.com/JMBQ/image/blob/main/Honkai-Impact-3-mod/06.jpg)</br>
    
 ## 特点
-1. 只适用于国外区服（sea, globle, JP, KR, TW）, 国服玩家直接看最后
+1. 只适用于国外区服（sea, global, JP, KR, TW）, 国服玩家直接看最后
 2. 动态抓取offset，故适用于当前及以后的任意游戏版本
 3. 适配arm64-v8a、armeabi-v7a
 4. 适用于安卓手机(推荐)、安卓模拟器
