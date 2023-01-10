@@ -55,3 +55,4 @@ invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)
 ## 国服玩家注意
 * 该mod不适合国服(有签名校验)
 * 如果你手机已解锁，可以使用 [U.R.C](https://github.com/JMBQ/URC)，通杀所有服务器
+* 提供官服6.4版本直装包，我先建个文件夹，出新版来拿。中路对决，把我的防守技术都塞进去，来人挑战下？
