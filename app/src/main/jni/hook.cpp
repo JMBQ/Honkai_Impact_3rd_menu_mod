@@ -41,8 +41,12 @@ unsigned long get_module_base(const char* name) {
         if (strstr(line, name)) {
             int num = sscanf(line, "%lx-%lx %s %lx %*x:%*x %*u %s\n",
                              &start, &end, flags, &ptr, path);
-            if (num != 5)   continue;
-            if (ptr == 0 && !strstr(line, "-s")) {
+            if (num != 5) {
+                start = 0;
+                continue;
+            }
+            
+            if (ptr == 0 && !strstr(line, "r--s")) {
                 break;
             }
         }
