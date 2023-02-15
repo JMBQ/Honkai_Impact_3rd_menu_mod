@@ -5,9 +5,6 @@ buildscript {
         // maven { url 'https://maven.aliyun.com/repository/central' }  //central
         // maven { url 'https://maven.aliyun.com/repository/public' }  //jcenter
         // maven { url 'https://maven.aliyun.com/repository/google' }  //google
-        // maven { url 'https://maven.aliucord.com/snapshots' }
-        // // JitPack 远程仓库：https://jitpack.io
-        // maven { url 'https://jitpack.io' }
 
         google()
         mavenCentral()
@@ -25,9 +22,6 @@ allprojects {
         // maven { url 'https://maven.aliyun.com/repository/central' }  //central
         // maven { url 'https://maven.aliyun.com/repository/public' }  //jcenter
         // maven { url 'https://maven.aliyun.com/repository/google' }  //google
-        // maven { url 'https://maven.aliucord.com/snapshots' }
-        // // JitPack 远程仓库：https://jitpack.io
-        // maven { url 'https://jitpack.io' }
 
         google()
         mavenCentral()
