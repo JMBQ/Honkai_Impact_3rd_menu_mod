@@ -1,0 +1,39 @@
+
+buildscript {
+    repositories {
+        // CN version
+        // maven { url 'https://maven.aliyun.com/repository/central' }  //central
+        // maven { url 'https://maven.aliyun.com/repository/public' }  //jcenter
+        // maven { url 'https://maven.aliyun.com/repository/google' }  //google
+        // maven { url 'https://maven.aliucord.com/snapshots' }
+        // // JitPack 远程仓库：https://jitpack.io
+        // maven { url 'https://jitpack.io' }
+
+        google()
+        mavenCentral()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.2'
+
+    }
+}
+
+allprojects {
+    repositories {
+        // CN version
+        // maven { url 'https://maven.aliyun.com/repository/central' }  //central
+        // maven { url 'https://maven.aliyun.com/repository/public' }  //jcenter
+        // maven { url 'https://maven.aliyun.com/repository/google' }  //google
+        // maven { url 'https://maven.aliucord.com/snapshots' }
+        // // JitPack 远程仓库：https://jitpack.io
+        // maven { url 'https://jitpack.io' }
+
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

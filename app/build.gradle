@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 32
+    defaultConfig {
+        applicationId "com.android.support"
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 1
+        versionName "3.2"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                //"armeabi-v7a",
+                abiFilters "arm64-v8a"
+            }
+        }
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/jni/CMakeLists.txt"
+            version '3.18.1'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:4.3'
+}
