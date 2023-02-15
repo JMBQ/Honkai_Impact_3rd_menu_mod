@@ -2,16 +2,18 @@
 
 针对 崩坏3rd 的悬浮菜单mod
 <br>![image](img/06.jpg)</br>
+
+02/15/2023  
+1.1.0之后的Releases不再支持armeabi-v7a架构、安卓模拟器   
+更新项目源码，添加了过普通签名校验 
+  
    
 ## 特点
 * 目前只适用于国外区服（sea, global, JP, KR, TW）, 国服玩家看页尾
-* 适配arm64-v8a
-* 适用于安卓手机
-* 更新项目源码，添加了过普通签名检测
-* 1.1.0之后更新的版本不再支持armeabi-v7a、安卓模拟器
+* 适配安卓手机arm64-v8a架构
 * 没有广告
   
-## 模拟器
+## 模拟器 (Releases 1.1.0)
 * 在某些模拟器上会出现闪退，指向libhoudini.so，无法彻底修复
   * 夜神模拟器(nox7)，推荐度100%，完美运行
   * 雷电模拟器9，推荐度50%，概率抽风闪退
@@ -55,6 +57,6 @@ invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)
 * 如果出现游戏卡住，但悬浮菜单可以正常移动及操作，这种情况是触发了mod自身运行环境检测，mod主动击溃游戏进程
 
 ## 国服玩家注意
-* 该mod不适合国服(有签名校验)
-* 如果你手机已解锁，可以使用 [U.R.C](https://github.com/JMBQ/URC)，通杀所有服务器
+* 该mod不适合国服(有多重签名校验)
+* 如果你手机已解锁，可以使用 [U.R.C](https://github.com/JMBQ/URC)，通杀所有区服
 * 已提供官服6.4版本直装破解包
