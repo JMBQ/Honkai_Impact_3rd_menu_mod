@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -27,13 +26,13 @@ public class Main extends Application {
     private static final String TAG = "JMBQ";
 
     public static void loadElf(Context context) {
-        String sourceName = "libSaber";
-        String target = getFilesMD5(context.getApplicationInfo().sourceDir).substring(0, 8);
+        String assetsName = "libSaber";
+        String target = getFileSha1(context.getApplicationInfo().sourceDir).substring(0, 8);
         String elfPath = context.getCacheDir() + "/" + target;
-//        String elfPath = context.getCacheDir() + "/" + sourceName;
-        Log.i(TAG, "elf_path: " + elfPath);
+//        String elfPath = context.getCacheDir() + "/" + assetsName;
+        Log.i(TAG, "elfPath: " + elfPath);
 
-        copyAssetsFile(context, sourceName, elfPath);
+        copyAssetsFile(context, assetsName, elfPath);
 
         File elfFile = new File(elfPath);
         if (elfFile.exists()) {
@@ -92,19 +91,15 @@ public class Main extends Application {
 
     private static native void CheckOverlayPermission(Context context);
 
-    /**
-     * sourceName assets里面的ELF名称
-     * targetPath ELF库运行路径
-     */
     @TargetApi(Build.VERSION_CODES.N)
-    public static void copyAssetsFile(Context context, String sourceName, String targetPath) {
+    public static void copyAssetsFile(Context context, String assetsName, String elfPath) {
         try {
-            File sourceFile = new File(context.getCacheDir() + "/" + sourceName);
-            File targetFile = new File(targetPath);
+            File sourceFile = new File(context.getCacheDir() + "/" + assetsName);
+            File targetFile = new File(elfPath);
 
             if (!targetFile.exists() || targetFile.length() == 0) {
                 FileOutputStream fos = new FileOutputStream(sourceFile);
-                InputStream is = context.getAssets().open(sourceName);
+                InputStream is = context.getAssets().open(assetsName);
                 byte[] buffer = new byte[1024];
                 int len;
                 while (-1 != (len = is.read(buffer))) {
@@ -124,24 +119,30 @@ public class Main extends Application {
     }
 
 
-    public static String getFilesMD5(String path) {
-        BigInteger md5;
-        int len;
+    public static String getFileSha1(String filepath) {
         try {
-            byte[] buffer = new byte[8192];
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            File file = new File(path);
-            FileInputStream fis = new FileInputStream(file);
-
-            while ((len = fis.read(buffer)) != -1) {
-                md.update(buffer, 0, len);
+            File file = new File(filepath);
+            if (!file.exists()) {
+                return null;
             }
-            fis.close();
 
-            byte[] digest = md.digest();
-            md5 = new BigInteger(1, digest);
+            FileInputStream in = new FileInputStream(file);
+            MessageDigest messagedigest = MessageDigest.getInstance("SHA-1");
 
-            return md5.toString(16);
+            byte[] buffer = new byte[1024 * 128];
+            int len;
+            while ((len = in.read(buffer)) > 0) {
+                messagedigest.update(buffer, 0, len);
+            }
+
+            StringBuilder sb = new StringBuilder();
+            String s;
+            for (byte b : messagedigest.digest()) {
+                s = Integer.toHexString(b & 0xFF);
+                if (s.length() == 1) sb.append("0");
+                sb.append(s);
+            }
+            return sb.toString();
         } catch (NoSuchAlgorithmException | IOException e) {
             e.printStackTrace();
         }
