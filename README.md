@@ -72,4 +72,4 @@ invoke-static {}, Lcom/android/support/PmsHook;->killPM()V
 ## 最后
 * 该mod不适合国服(有多重签名校验)
 * 如果你手机已解锁，可以使用 [U.R.C](https://github.com/JMBQ/URC)，通杀所有区服
-* 已提供官服6.4版本直装破解包
+* 已提供简中服6.5版本直装破解包
