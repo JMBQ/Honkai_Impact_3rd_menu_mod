@@ -38,7 +38,8 @@
 
   * 修改启动android:name
   <br></br>
-  将 com.combosdk.openapi.ComboApplication 替换成 com.android.support.PmsHook
+  将 ```com.combosdk.openapi.ComboApplication``` 替换成 ```com.android.support.PmsHook```
+  <br></br>
   ```
   <application ... android:name="com.combosdk.openapi.ComboApplication" ...>
   ```
