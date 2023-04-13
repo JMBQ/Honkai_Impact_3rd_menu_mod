@@ -9,6 +9,7 @@
 * Android 64-bit phones, no root required
 * Compatible with arm64-v8a architecture (64-bit)
 * Support for bypassing normal signature checks
+* Dynamic capture function offset for current and future versions of the game
 * No advertising
   
 ## x86 Android Emulator
