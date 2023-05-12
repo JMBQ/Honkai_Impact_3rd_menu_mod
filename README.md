@@ -2,7 +2,8 @@
 
 ## English version click [here](README_EN.md)
 <br>![image](img/01.jpg)</br>
-
+<video src="img/PC_1.3.0.mp4">
+</video>
 
    
 ## 特点
