@@ -35,8 +35,8 @@
   * 将 ```androidx.core.app.CoreComponentFactory``` 替换成 ```com.android.support.Main```
 
 * 编译游戏文件夹，生成apk文件，这里简称 P
-* 使用压缩软件(如winrar)打开官方apk，将一级目录里的dex全部提取出来.这步是为了绕过dex校验，无论你之前是否修改过smali文件，打包后dex文件会发生改变，我们需要还原这个，star rail也可以这样绕过检验
-* 使用压缩软件打开P，将这些dex文件和我给的assets、classes4.dex都复制到P里面。提取出来的dex名称不能和我给的dex名称重复，若出现重复，修改我的dex为classes5.dex
+* 使用压缩软件(如winrar)打开官方apk，将一级目录里的dex全部提取出来。这步是为了绕过dex校验，无论你之前是否修改过smali文件，打包后dex文件会发生改变，我们需要还原这个，star rail也可以这样绕过检验
+* 使用压缩软件打开P，将提取出来的dex文件和我给的assets、classes4.dex都复制到P里面。提取出来的dex名称不能和我给的dex名称重复，若出现重复，修改我的dex为classes5.dex
 * 对P进行zipAlign操作（自动附带签名），生成真正的菜单模块apk
 
 
