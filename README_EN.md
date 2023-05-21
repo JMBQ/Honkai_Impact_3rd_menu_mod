@@ -34,7 +34,7 @@
   * Replace ```androidx.core.app.CoreComponentFactory``` with ```com.android.support.Main```
   <br></br>
 * Use apkeasytool to compile the game folder and generate the apk file, referred to here as P
-* Use a compression software (e.g. winrar) to open the official apk and extract all the dex from the first level directory. This step is to bypass the dex checksum, whether you have modified the smali file before or not, the dex file will change after packing, we need to restore this, star rail can also bypass the checksum this way
+* Use a compression software (e.g. winrar) to open the official apk and extract all the dex from the first level directory. This step is to bypass the dex check, whether you have modified the smali file before or not, the dex file will change after packing, we need to restore this, star rail can also bypass dex check this way
 * Open P using the compression software and copy the extracted dex file into P along with the assets and classes4.dex I have given you. The name of the extracted dex should not be duplicated with the name of the dex I gave, if it is, change my dex to classes5.dex
 * Perform a zipAlign operation on P (automatically with a signature) to generate the real menu module apk
 
