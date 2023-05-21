@@ -21,8 +21,6 @@
 ## How to use
 * I only recommend using the apkeasytool tool
 * The game folder is automatically generated after decompiling the official apk of the game
-<br></br>
-<br></br>
 * modify AndroidManifest.xml
   * Add SYSTEM_ALERT_WINDOW permissions, Add corresponding service
   ```
