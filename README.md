@@ -33,6 +33,10 @@
 * 对P进行zipAlign操作（自动附带签名），生成真正的菜单模块apk
 
 
+https://github.com/JMBQ/Honkai_Impact_3rd_menu_mod/assets/78288131/1570ba6b-9c17-4dca-abe4-db212ccacc66
+
+
+
 ## 注意
 * 首次运行游戏，在正常情况下会跳至悬浮权限界面
 * 刚打开游戏就闪退
