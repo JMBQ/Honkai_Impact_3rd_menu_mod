@@ -1,25 +1,19 @@
-# Honkai Impact 3 mod
+![image](img/01.jpg)
 
-<br>![image](img/01.jpg)</br>
-
-
-   
 ## Features
-* Available for this servers, including sea, global, jp, kr, tw, vn
+* Available for this servers, including SEA, GLOBAL, JP, KR, TW, VN
 * Android 64-bit phones, no root required
-* Compatible with arm64-v8a architecture (64-bit)
+* Compatible with arm64-v8a architecture
 * Support for bypassing normal signature checks
 * Dynamic capture function offset for current and future versions of the game
-* No advertising
+* No ads
   
 ## x86 Android Emulator
 * 32-bit emulators are no longer supported
-  * nox9 (64-bit), Recommendation 100%
-  * ldplayer9 (64-bit), Recommendation50%
-  * Other emulators not tested
+* Recommended for 64-bit nox9 only
   
 ## How to use
-* I only recommend using the apkeasytool tool
+* only recommend using the apkeasytool
 * The game folder is automatically generated after decompiling the official apk of the game
 * modify AndroidManifest.xml
   * Add SYSTEM_ALERT_WINDOW permissions, Add corresponding service
@@ -34,7 +28,7 @@
   * Replace ```androidx.core.app.CoreComponentFactory``` with ```com.android.support.Main```
   <br></br>
 * Use apkeasytool to compile the game folder and generate the apk file, referred to here as P
-* Use a compression software (e.g. winrar) to open the official apk and extract all the dex from the first level directory. This step is to bypass the dex check, whether you have modified the smali file before or not, the dex file will change after packing, we need to restore this, star rail can also bypass dex check this way
+* Use a compression software (e.g. winrar) to open the official apk and extract all the dex from the first level directory. This step is to bypass the dex check, whether you have modified the smali file or not, the dex file will change after packing, we need to restore this, star rail can also bypass dex check by this way
 * Open P using the compression software and copy the extracted dex file into P along with the assets and classes4.dex I have given you. The name of the extracted dex should not be duplicated with the name of the dex I gave, if it is, change my dex to classes5.dex
 * Perform a zipAlign operation on P (automatically with a signature) to generate the real menu module apk
 
