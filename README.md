@@ -1,9 +1,5 @@
-# Honkai Impact 3 mod
-
 ## [English version](README_EN.md)
-<br>![image](img/01.jpg)</br>
-
-   
+![image](img/01.jpg)
 ## 特点
 * 适配国外区服, 包括且不限sea, global, jp, kr, tw, vn
 * 适配安卓64位手机, 无需root
@@ -15,13 +11,10 @@
   
 ## 模拟器
 * 不再支持32位模拟器
-  * 64位夜神模拟器9 (nox9), 推荐度100%
-  * 64位雷电模拟器9, 推荐度50%, 概率抽风
-  * mumu，推荐度0%
-  * 其它未测试
+* 仅推荐64位夜神模拟器9 (nox9)
   
 ## 食用
-* 我只推荐使用apkeasytool工具
+* 只推荐使用apkeasytool工具
 * 反编译游戏官方apk完毕后自动生成游戏文件夹
 * 修改AndroidManifest.xml
   * 添加悬浮窗权限, 添加悬浮窗服务
