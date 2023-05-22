@@ -32,6 +32,7 @@
 * Open P using the compression software and copy the extracted dex file into P along with the assets and classes4.dex I have given you. The name of the extracted dex should not be duplicated with the name of the dex I gave, if it is, change my dex to classes5.dex
 * Perform a zipAlign operation on P (automatically with a signature) to generate the real menu module apk
 
+https://github.com/JMBQ/Honkai_Impact_3rd_menu_mod/assets/78288131/1570ba6b-9c17-4dca-abe4-db212ccacc66
 
 ## Cautions
 * The first time you run the game, you will jump to the hover permission screen under normal circumstances
