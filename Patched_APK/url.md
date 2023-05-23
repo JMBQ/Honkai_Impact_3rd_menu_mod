@@ -1,6 +1,13 @@
 
 
-support: JMBQ_v6.5_com.miHoYo.enterprise.NGHSoD.apk	/ 简中服6.5直装破解
+MOD_APK support: 
+
+SEA 6.6.0
+
+TW  6.6.0
+
+CN  6.5.0
+
 
 download:  https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA
 
