@@ -1,5 +1,9 @@
 ![image](img/01.jpg)
 
+## Device
+* Android vesion 9 or higher
+* If the device is rooted, you need to hide the root from the game, otherwise it may prompt "unofficial  package"
+
 ## Features
 * Available for this servers, including SEA, GLOBAL, JP, KR, TW, VN
 * Android 64-bit phones, no root required
