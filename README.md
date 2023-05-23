@@ -1,5 +1,10 @@
 ## [English version](README_EN.md)
 ![image](img/01.jpg)
+  
+## 设备要求
+* 安卓9或更高
+* 如果设备已root，需要对游戏隐藏root，否则可能会提示“非官方安装包”
+  
 ## 特点
 * 适配国外区服, 包括且不限sea, global, jp, kr, tw, vn
 * 适配安卓64位手机, 无需root
