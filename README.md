@@ -1,9 +1,10 @@
 ## [English version](README_EN.md)
 ![image](img/01.jpg)
   
-## 设备要求
-* 安卓9或更高
-* 如果设备已root，需要对游戏隐藏root，否则可能会提示“非官方安装包”
+## hack进度
+* ano保护比较难搞，它居然绕过了我创建的虚假路径，拿到真实路径来进行检测，我有几个破解思路，需要时间
+* 如果你设备已root，我极度建议你使用[U.R.C](https://github.com/JMBQ/URC)，它和menu mod相比，既好用又安全
+* release不用试了
   
 ## 特点
 * 适配国外区服, 包括且不限sea, global, jp, kr, tw, vn
@@ -30,15 +31,6 @@
   ```
   ![image](img/02.jpg)
   <br></br>
-  * 将 ```androidx.core.app.CoreComponentFactory``` 替换成 ```com.android.support.Main```
-
-* 编译游戏文件夹，生成apk文件，这里简称 P
-* 使用压缩软件(如winrar)打开官方apk，将一级目录里的dex全部提取出来。这步是为了绕过dex校验，无论你之前是否修改过smali文件，打包后dex文件会发生改变，我们需要还原这个，star rail也可以这样绕过检验
-* 使用压缩软件打开P，将提取出来的dex文件和我给的assets、classes4.dex都复制到P里面。提取出来的dex名称不能和我给的dex名称重复，若出现重复，修改我的dex为classes5.dex
-* 对P进行zipAlign操作（自动附带签名），生成真正的菜单模块apk
-
-
-https://github.com/JMBQ/Honkai_Impact_3rd_menu_mod/assets/78288131/1570ba6b-9c17-4dca-abe4-db212ccacc66
 
 
 
