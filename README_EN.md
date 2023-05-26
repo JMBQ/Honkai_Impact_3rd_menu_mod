@@ -1,5 +1,10 @@
 ![image](img/01.jpg)
 
+## hack Progress
+* The ano protection is harder to hack, it actually bypassed the fake path I created and got the real path for detection, I have a few ideas on how to crack it, it takes time
+* If your device is rooted, I highly recommend using [U.R.C](https://github.com/JMBQ/URC). It works well and is safe compared to the menu mod
+* release is no longer available
+
 ## Device
 * Android vesion 9 or higher
 * If the device is rooted, you need to hide the root from the game, otherwise it may prompt "unofficial  package"
