@@ -16,32 +16,7 @@
 * 没有广告
 * 简中服玩家看页尾
   
-## 模拟器
-* 不再支持32位模拟器
-* 仅推荐64位夜神模拟器9 (nox9)
-  
-## 食用
-* 只推荐使用apkeasytool工具
-* 反编译游戏官方apk完毕后自动生成游戏文件夹
-* 修改AndroidManifest.xml
-  * 添加悬浮窗权限, 添加悬浮窗服务
-  ```
-  <service android:name="com.android.support.Launcher" android:enabled="true" android:exported="false" android:stopWithTask="true"/>
-
-  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-  ```
-  ![image](img/02.jpg)
-  <br></br>
-
-
-
-## 注意
-* 首次运行游戏，在正常情况下会跳至悬浮权限界面
-* 刚打开游戏就闪退
-  * 偶尔出现刚打开就闪退 属于正常现象
-  * 连续多次出现刚打开就闪退 属于不正常现象，检查是否存在错误操作
 
 ## 最后
-* 该mod不适合简中服(有多重签名校验)
 * 如果你手机已解锁bootloader，可以使用 [U.R.C](https://github.com/JMBQ/URC)，适用所有区服
 * 已提供简中服6.5版本直装破解包
