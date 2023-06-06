@@ -3,8 +3,9 @@
   
 ## hack进度
 * ano保护比较难搞，它居然绕过了我创建的虚假路径，拿到真实路径来进行检测，我有几个破解思路，需要时间
+* menu mod 最近没时间弄，就算弄出来，也不再具备通用性了，U.R.C代替它
 * 如果你设备已root，我极度建议你使用[U.R.C](https://github.com/JMBQ/URC)，它和menu mod相比，既好用又安全
-* release不用试了
+* 如果你设备没有root，我建议使用能开启Zygisk的虚拟app，在CN环境里，这样的app是存在的
   
 ## 特点
 * 适配国外区服, 包括且不限sea, global, jp, kr, tw, vn
