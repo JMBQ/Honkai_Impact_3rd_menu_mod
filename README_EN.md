@@ -3,7 +3,7 @@
 ## hack Progress
 * If your device is rooted, I highly recommend using [U.R.C](https://github.com/JMBQ/URC). It works well and is safe compared to the menu mod
 * If your device is not rooted, I recommend using a virtual app that enables Zygisk, which is present in the CN environment
-* SEA MENU MOD 6.7.0 update, im coming
+* MENU MOD 6.7.0 update, im coming
 
 
 ## Features
