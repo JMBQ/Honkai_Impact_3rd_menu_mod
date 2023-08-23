@@ -1,7 +1,7 @@
 
 ## Honkai Impact 3 menu mod v6.8.0
 * SEA
-* GLOBAL  (need fix,dont download)
+
 
 ## Device
 * 设备环境：安卓真机，模拟器不支持
