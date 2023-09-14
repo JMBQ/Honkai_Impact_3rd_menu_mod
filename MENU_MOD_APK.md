@@ -1,5 +1,5 @@
 
-## Honkai Impact 3 menu mod v6.8.0
+## Honkai Impact 3 menu mod v6.9.0
 * SEA
 
 
@@ -13,4 +13,5 @@
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
 
 ## Download
-* https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA
+* Release
+* ~~https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA~~
