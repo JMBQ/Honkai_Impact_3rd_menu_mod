@@ -1,6 +1,7 @@
 
 ## Honkai Impact 3 menu mod v6.9.0
 * SEA
+* GLOBAL
 
 
 ## Device
