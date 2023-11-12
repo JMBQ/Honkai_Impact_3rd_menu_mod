@@ -10,8 +10,8 @@
 * device : Android real phone, emulator not supported
 * android version: 9 or higher
 ## how to install
-* 下载zip并解压，你需要使用apks安装器(比如 SAI)来勾选解压出来的3个apk文件安装（无视此条，直接点击apk安装的人，请不要来issues烦我）
-* Download the zip and unzip it, you'll need to use the apks installer (exp: SAI) to select three apk files that come out of the unzip to install them (anyone who ignores this and clicks directly on the apk to install it, please don't bother me with issues)
+* 下载对应区服的apks文件，你需要使用apks安装器(比如 SAI)选择apks文件安装
+* Download the apks file, you need to use an apks installer (e.g. SAI) to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
