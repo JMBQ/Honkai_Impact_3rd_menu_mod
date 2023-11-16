@@ -17,4 +17,6 @@
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
 
 ## Download
+* 如果下载页面卡在“正在加载”，这意味着mega服务器抽风，等待半小时后再尝试
+* If the download page is stuck at "Loading", it means the mega server is having trouble, wait half an hour and try again.
 * https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA
