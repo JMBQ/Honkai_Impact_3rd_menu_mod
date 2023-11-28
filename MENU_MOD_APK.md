@@ -18,5 +18,5 @@
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
 
 ## Download
-* [One Ddrive](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
+* [One Drive](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
