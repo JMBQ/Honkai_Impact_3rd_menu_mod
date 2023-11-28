@@ -9,14 +9,14 @@
 * 安卓版本：安卓9以上
 * device : Android real phone, emulator not supported
 * android version: 9 or higher
-## how to install
-* 下载对应区服的apks文件，你需要使用apks安装器(比如 SAI)选择apks文件安装
-* Download the apks file, you need to use an apks installer (e.g. SAI) to select the apks file and install it
+## Install
+* [Split APKs Installer](https://github.com/Aefyr/SAI/releases)
+* 下载对应区服的apks文件，使用apks安装器选择apks文件进行安装
+* Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
 
 ## Download
-* 如果下载页面卡在“正在加载”，这意味着mega服务器抽风，等待半小时后再尝试
-* If the download page is stuck at "Loading", it means the mega server is having trouble, wait half an hour and try again.
-* https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA
+* [One Ddrive](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
+* [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
