@@ -1,5 +1,5 @@
 
-## Honkai Impact 3 menu mod v7.0.0
+## Honkai Impact 3 menu mod v7.1.0
 * SEA
 * GLOBAL
 
@@ -19,4 +19,4 @@
 
 ## Download
 * [One Drive](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
-* [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
+* ~[MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)~
