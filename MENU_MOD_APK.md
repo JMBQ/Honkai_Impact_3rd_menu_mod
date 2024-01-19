@@ -20,5 +20,5 @@
 * AI：Don't use in the Online combat with other player, this is a slightly dangerous feature, use AI as little as possible
 
 ## Download
-* [One Drive](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
+* [One Drive: seems to have traffic restrictions](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
