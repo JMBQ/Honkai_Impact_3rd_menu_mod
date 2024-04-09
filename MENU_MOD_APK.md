@@ -2,6 +2,7 @@
 ## Honkai Impact 3 menu mod v7.3.0
 * SEA
 * GLOBAL
+* [Other please click here](https://androidrepublic.org/threads/honkai-impact-3-global-sea-jp-kr-tw-v7-3-0-mod.141396/)
 
 
 ## Device
