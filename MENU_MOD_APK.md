@@ -1,14 +1,14 @@
 
-## Honkai Impact 3 menu mod v7.3.0
+## Honkai Impact 3 menu mod v7.4.0
 * SEA
 * GLOBAL
 * [Other please click here](https://androidrepublic.org/threads/honkai-impact-3-global-sea-jp-kr-tw-v7-3-0-mod.141396/)
 
 
 ## Device
-* 设备环境：安卓真机，模拟器不支持
+* 设备环境：安卓真机，模拟器不支持，虚拟机不支持(游戏官方会检测虚拟机)
 * 安卓版本：安卓9以上
-* device : Android real phone, emulator not supported
+* device : Android real phone, emulator not supported, Virtual machines are not supported (the game officially detects virtual machines)
 * android version: 9 or higher
 ## Install
 * [Split APKs Installer](https://github.com/Aefyr/SAI/releases)
@@ -18,9 +18,7 @@
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
-* AI：不要在联机战斗中使用，该功能有轻度危险性，尽量少用
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
-* AI：Don't use in the Online combat with other player, this is a slightly dangerous feature, use AI as little as possible
 
 ## Download
 * [One Drive: seems to have traffic restrictions](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
