@@ -3,7 +3,6 @@
   
 ## 建议
 * 如果你设备已root，我推荐使用[U.R.C](https://github.com/JMBQ/URC)，它和menu mod相比，既方便又安全
-* 如果你设备没有root，我建议使用能构建出root环境的虚拟app
 
 ## 成品
 * 菜单APK持续更新：[点我查看](MENU_MOD_APK.md)
