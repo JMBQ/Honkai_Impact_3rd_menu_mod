@@ -2,7 +2,6 @@
 
 ## suggestion
 * If your device is rooted, I highly recommend using [U.R.C](https://github.com/JMBQ/URC). It works well and is safe compared to the menu mod
-* If your device is not rooted, I recommend using a virtual app that builds out the root environment (vphonegaga android 10)
 
 
 ## MENU APK
