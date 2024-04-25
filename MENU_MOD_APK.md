@@ -8,7 +8,7 @@
 ## Device
 * 设备环境：安卓真机，模拟器不支持，虚拟机不支持(游戏官方会检测虚拟机)
 * 安卓版本：安卓9以上
-* device : Android real phone, emulator not supported, Virtual machines are not supported (the game officially detects virtual machines)
+* device : Android real phone, emulator are not supported, Virtual phone are not supported (the game officially detects virtual phone)
 * android version: 9 or higher
 ## Install
 * [Split APKs Installer](https://github.com/Aefyr/SAI/releases)
