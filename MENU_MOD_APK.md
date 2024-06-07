@@ -4,7 +4,6 @@
 * GLOBAL
 * [Other please click here](https://androidrepublic.org/threads/honkai-impact-3-global-sea-jp-kr-tw-v7-3-0-mod.141396/)
 
-
 ## Device
 * 设备环境：安卓真机. 不支持模拟器和虚拟机(游戏官方会检测虚拟机)
 * 安卓版本：安卓9以上
@@ -18,9 +17,8 @@
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
-* 由于某些无耻之徒的贩卖行为，决定给他们上强度，把小白过滤掉（要是有本事把我的签名校验破解，我都会自认技不如人，但你们什么都不改动，直接拿来贩卖，这是对我的侮辱）
+* 由于某些无耻之徒的贩卖行为，决定给他们上强度，把小白过滤掉（要是有本事破解掉我的签名校验，我都会自认技不如人，但你们什么都不改动，直接拿来贩卖，这是对我的侮辱）
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
 
 ## Download
-* [One Drive: seems to have traffic restrictions](https://1drv.ms/f/s!ApGsnK18f0dGazthEWyO6oRoh4Y)
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
