@@ -18,7 +18,7 @@ uint64_t il2cpp_base = 0;
 Cheat cheat[8];
 
 
-unsigned long get_module_base(const char *name) {
+uint64_t get_module_base(const char *name) {
     uint64_t addr = 0;
     char line[1024];
     uint64_t end = 0;
