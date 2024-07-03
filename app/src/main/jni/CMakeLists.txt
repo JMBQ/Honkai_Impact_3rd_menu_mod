@@ -34,14 +34,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${C_FLAGS} ${CXX_FLAGS}")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${LINKER_FLAGS}")
 set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} ${LINKER_FLAGS}")
 
-add_library(JMBQ SHARED main.cpp hook.cpp jni.cpp
+add_library(HI3 SHARED main.cpp hook.cpp jni.cpp safe.cpp
         ${xdl-src}
         )
-target_link_libraries(JMBQ log
+target_link_libraries(HI3 log
         ${PROJECT_SOURCE_DIR}/Dobby/${ANDROID_ABI}/libdobby.a
         )
-
-if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_custom_command(TARGET JMBQ POST_BUILD
-            COMMAND ${CMAKE_STRIP} --strip-all --remove-section=.comment "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libJMBQ.so")
-endif ()

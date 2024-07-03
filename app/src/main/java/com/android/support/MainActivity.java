@@ -10,50 +10,61 @@ import android.content.pm.Signature;
 import android.content.pm.SigningInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 public class MainActivity extends Activity {
-
-//    static {
-//        System.loadLibrary("JMBQ");
-//    }
+    public static final String TAG = "JMBQ"; //Tag for logcat
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSignTest(getApplicationContext());
+        Context context = getApplicationContext();
+        Log.i(TAG, "[onCreate] getGameOrigSignature: " + getGameOrigSignature(context));
     }
 
+    boolean getGameOrigSignature(Context context) {
+        StringBuilder sb = new StringBuilder();
+        Signature[] signs;
+        String packageName = "com.miHoYo.enterprise.NGHSoD";
 
-    public static void getSignTest(Context context) {
-        Log.i("JMBQ", "getSignatureOldAPI md5: " + md5(getSignatureOldAPI(context)));
-        Log.i("JMBQ", "getSignatureNewAPI md5: " + md5(getSignatureNewAPI(context)));
-        Log.i("JMBQ", "signature killed: " + PmsHook.killed);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            signs = getSignatureNewAPI(context, packageName);
+        } else {
+            signs = getSignatureOldAPI(context, packageName);
+        }
+
+        if (signs == null) {
+            return false;
+        }
+
+        for (Signature sign : signs) {
+            sb.append(sign.toCharsString());
+        }
+
+        //the signature of game
+        Log.i(TAG, "OrigSignature: " + sb);
+
+        return true;
     }
 
-
-    private static byte[] getSignatureOldAPI(Context context) {
+    private static Signature[] getSignatureOldAPI(Context context, String packageName) {
         try {
             @SuppressLint("PackageManagerGetSignatures")
-            PackageInfo info = context.getPackageManager().getPackageInfo(context.getPackageName(),
+            PackageInfo info = context.getPackageManager().getPackageInfo(packageName,
                     PackageManager.GET_SIGNATURES);
-            return info.signatures[0].toByteArray();
+            return info.signatures;
         } catch (PackageManager.NameNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
     @TargetApi(Build.VERSION_CODES.P)
-    private static byte[] getSignatureNewAPI(Context context) {
+    private static Signature[] getSignatureNewAPI(Context context, String packageName) {
         PackageInfo packageInfo = null;
         Signature[] signs;
 
         try {
-            packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(),
+            packageInfo = context.getPackageManager().getPackageInfo(packageName,
                     PackageManager.GET_SIGNING_CERTIFICATES);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -70,29 +81,6 @@ public class MainActivity extends Activity {
             signs = signingInfo.getSigningCertificateHistory();
         }
 
-        return signs[0].toByteArray();
+        return signs;
     }
-
-
-    private static String md5(byte[] bytes) {
-        if (bytes == null) {
-            return "null";
-        }
-
-        try {
-            byte[] digest = MessageDigest.getInstance("MD5").digest(bytes);
-            String hexDigits = "0123456789abcdef";
-            char[] str = new char[digest.length * 2];
-            int k = 0;
-            for (byte b : digest) {
-                str[k++] = hexDigits.charAt(b >>> 4 & 0xf);
-                str[k++] = hexDigits.charAt(b & 0xf);
-            }
-
-            return new String(str);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 }

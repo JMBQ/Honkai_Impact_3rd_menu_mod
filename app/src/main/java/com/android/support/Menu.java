@@ -554,7 +554,7 @@ public class Menu {
                 Toast.makeText(context, "wait", Toast.LENGTH_SHORT).show();
                 switchR.setChecked(false);
             } else if (ret == 0) {
-                Toast.makeText(context, "faild", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "fail", Toast.LENGTH_SHORT).show();
                 switchR.setChecked(false);
             }
 

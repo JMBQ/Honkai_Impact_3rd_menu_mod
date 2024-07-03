@@ -2,7 +2,6 @@
 #include <jni.h>
 #include <cstring>
 #include <cstdio>
-#include "obfuscate.h"
 
 
 static char *ByteArrayToChar(JNIEnv *env, jbyteArray ba) {

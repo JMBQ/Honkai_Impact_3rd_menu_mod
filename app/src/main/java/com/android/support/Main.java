@@ -20,16 +20,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Map;
 
 @SuppressWarnings("all")
 public class Main extends Application {
     private static final String TAG = "JMBQ";
 
     public static void loadElf(Context context) {
-        String assetsName = "libSaber";
+        String assetsName = "libHI3";
         String target = getFileSha1(context.getApplicationInfo().sourceDir).substring(0, 8);
         String elfPath = context.getCacheDir() + "/" + target;
-//        String elfPath = context.getCacheDir() + "/" + assetsName;
         Log.i(TAG, "elfPath: " + elfPath);
 
         copyAssetsFile(context, assetsName, elfPath);
@@ -42,7 +42,7 @@ public class Main extends Application {
                 return;
             }
         } else {
-            Toast.makeText(context, "faild to copy elf", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "failed to copy elf", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -149,29 +149,63 @@ public class Main extends Application {
         return null;
     }
 
-
-    public static void Start(Context context) {
-        MainActivity.getSignTest(context);
-        loadElf(context);
-//        CrashHandler.init(context, false);
-        CheckOverlayPermission(context);
-    }
-
-    public static void StartWithoutPermission(Context context) {
-        CrashHandler.init(context, true);
-        if (context instanceof Activity) {
-            //Check if context is an Activity.
-            Menu menu = new Menu(context);
-            menu.SetWindowManagerActivity();
-            menu.ShowMenu();
-        } else {
-            //Anything else, ask for permission
-            CheckOverlayPermission(context);
+    @SuppressLint({"DiscouragedPrivateApi", "PrivateApi"})
+    public static Activity getCurrentActivity() {
+        try {
+            Class<?> activityThreadClass = Class.forName("android.app.ActivityThread");
+            Object activityThread = activityThreadClass.getMethod("currentActivityThread").invoke(null);
+            Field activitiesField = activityThreadClass.getDeclaredField("mActivities");
+            activitiesField.setAccessible(true);
+            Map<?, ?> activities = (Map<?, ?>) activitiesField.get(activityThread);
+            assert activities != null;
+            for (Object activityRecord : activities.values()) {
+                Class<?> activityRecordClass = activityRecord.getClass();
+                Field pausedField = activityRecordClass.getDeclaredField("paused");
+                pausedField.setAccessible(true);
+                if (!pausedField.getBoolean(activityRecord)) {
+                    Field activityField = activityRecordClass.getDeclaredField("activity");
+                    activityField.setAccessible(true);
+                    return (Activity) activityField.get(activityRecord);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
-    public void startLauncher(Context context) {
-        startService(new Intent(context, Launcher.class));
+    private static void create_menu() {
+        new Thread(() -> {
+            Activity activity;
+            try {
+                do {
+                    activity = getCurrentActivity();
+                    Thread.sleep(100);
+                } while (activity == null);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+            //Log.i(TAG, "activity: " + activity);
+            CheckOverlayPermission(activity);
+        }).start();
+    }
+
+
+    public static void Start() {
+        Context context = null;
+        try {
+            context = Main.getContext();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (context != null) {
+            PmsHook.killPM(context);
+            loadElf(context);
+            CrashHandler.init(context, false);
+            create_menu();
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -183,6 +217,6 @@ public class Main extends Application {
             }
         }
 
-        startLauncher(context);
+        startService(new Intent(context, Launcher.class));
     }
 }
