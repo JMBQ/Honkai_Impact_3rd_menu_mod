@@ -31,7 +31,7 @@ unsigned long get_module_base(const char *name) {
     }
 
     while (fgets(line, sizeof(line), fp)) {
-        if (!strstr(line, "libil2cpp.so")) {
+        if (!strstr(line, name)) {
             continue;
         }
 
