@@ -15,6 +15,10 @@
 * 打开游戏项目文件夹下的smali目录, 编辑com/combosdk/openapi/ComboApplication.smali文件，找到`constructor <init>()V`这个方法（一般是第一个方法），在`.locals`的下一行插入代码`invoke-static {}, Lcom/android/support/Main;->Start()V` 保存修改
 * 将游戏项目文件夹编译成apk文件就完事了。
 
+## 注意
+* 某些游戏会有保护壳，当它发现游戏被篡改时，会第一时间杀掉游戏
+* 如果使用本项目导致游戏闪退，不一定是我的问题，自行搞定
+
 
 
 
