@@ -9,7 +9,7 @@
 * 将菜单项目的smali文件夹下的文件，拷贝到游戏项目文件夹下的smali目录（如果有多个smali目录，一般放在最后一个）
 * 将菜单项目的so文件`libHI3.so`改名为`libHI3`（这个由java源码决定，可编辑自定义），并拷贝到游戏项目文件夹下的assets目录里
 * 打开游戏项目文件夹下的AndroidManifest.xml，找到`<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" ... android:name="com.combosdk.openapi.ComboApplication" ...>`  记住这个`"com.combosdk.openapi.ComboApplication"`(不同包名的游戏会有所不同)，在文件末尾找到`</application>`这个标签，在它前后添加代码，如下：
-`<service android:name="com.android.support.support" android:enabled="true" android:exported="false" android:stopWithTask="true"/>
+`<service android:name="com.android.support.Laucher" android:enabled="true" android:exported="false" android:stopWithTask="true"/>
     </application>
 	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>` 保存修改
 * 打开游戏项目文件夹下的smali目录, 编辑com/combosdk/openapi/ComboApplication.smali文件，找到`constructor <init>()V`这个方法（一般是第一个方法），在`.locals`的下一行插入代码`invoke-static {}, Lcom/android/support/Main;->Start()V` 保存修改
