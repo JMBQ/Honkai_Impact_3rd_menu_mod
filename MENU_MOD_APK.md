@@ -17,8 +17,9 @@
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
-* 由于某些无耻之徒的贩卖行为，决定给他们上强度，把小白过滤掉（要是有本事破解掉我的签名校验，我都会自认技不如人，但你们什么都不改动，直接拿来贩卖，这是对我的侮辱）
+* 由于简中某些无耻之徒的贩卖行为，决定给与限制（要是有本事破解掉我的签名校验，我都会自认技不如人，不作限制）
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
+* Because the Simplified Chinese region appeared to sell behavior, the use of the Simplified Chinese region is restricted, other regions are not subject to restrictions
 
 ## Download
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
