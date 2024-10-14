@@ -62,7 +62,7 @@ void analyze_image(const Il2CppImage* image, const char* _namespace,
     }
     cheat[index].found = true;
     cheat[index].offset = (uint64_t) method->methodPointer - il2cpp_base;
-    LOGI("cheat[%d].offset: %p", index, (void*) cheat[3].offset);
+    LOGI("cheat[%d].offset: %p", index, (void*) cheat[index].offset);
 }
 
 // Automatically search for the cheat method offset
