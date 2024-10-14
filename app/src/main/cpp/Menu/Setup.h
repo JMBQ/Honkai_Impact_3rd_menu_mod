@@ -3,11 +3,6 @@
 #include "Menu.h"
 #include "../log.h"
 
-extern int api_level();
-
-extern jclass clz_Launcher;
-extern jclass clz_CrashHandler;
-
 namespace ToastLength {
     inline const int LENGTH_LONG = 1;
     inline const int LENGTH_SHORT = 0;
