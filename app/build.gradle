@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+    namespace "com.android.support"
+    compileSdk 34
     defaultConfig {
         applicationId "com.android.support"
-        minSdkVersion 19
-        targetSdkVersion 33
+        minSdkVersion 26
+        targetSdkVersion compileSdk
         versionCode 1
         versionName "3.2"
 
@@ -26,7 +27,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "src/main/jni/CMakeLists.txt"
+            path "src/main/cpp/CMakeLists.txt"
             version '3.18.1'
         }
     }

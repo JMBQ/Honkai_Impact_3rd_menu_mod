@@ -17,9 +17,9 @@
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
 * 完整测试了SEA，其他区服只测试启动游戏是否崩溃
-* 由于简中某些无耻之徒的贩卖行为，决定给与限制（要是有本事破解掉我的签名校验，我都会自认技不如人，不作限制）
+* 由于简中某些无耻之徒的贩卖行为，决定给与简中区域功能限制（要是有本事破解掉我的签名校验，我都会自认技不如人，不作限制。一颗老鼠屎坏了一锅汤，也就没公平可言了）
 * SEA has been fully tested, and other servers only test whether the game crashes at startup
-* Because the Simplified Chinese region appeared to sell behavior, the use of the Simplified Chinese region is restricted, other regions are not subject to restrictions
+* Because the Simplified Chinese region appeared to sell behavior, the use of the Simplified Chinese region is restricted. basically the phone is not affected as long as it does not use a simplified Chinese rom
 
 ## Download
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)

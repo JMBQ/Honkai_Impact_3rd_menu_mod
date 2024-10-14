@@ -19,13 +19,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Context context = getApplicationContext();
-        Log.i(TAG, "[onCreate] getGameOrigSignature: " + getGameOrigSignature(context));
+        Log.i(TAG, "[onCreate] getGameOrigSignature: " +
+                getGameOrigSignature(context, context.getPackageName()));
     }
 
-    boolean getGameOrigSignature(Context context) {
+    boolean getGameOrigSignature(Context context, String packageName) {
         StringBuilder sb = new StringBuilder();
         Signature[] signs;
-        String packageName = "com.miHoYo.enterprise.NGHSoD";
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             signs = getSignatureNewAPI(context, packageName);
@@ -66,8 +66,7 @@ public class MainActivity extends Activity {
         try {
             packageInfo = context.getPackageManager().getPackageInfo(packageName,
                     PackageManager.GET_SIGNING_CERTIFICATES);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
+        } catch (PackageManager.NameNotFoundException ignored) {
         }
 
         SigningInfo signingInfo;

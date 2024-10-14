@@ -28,23 +28,23 @@ public class Preferences {
     public static native int Changes(Context con, int fNum, String fName, int i, boolean bool, String str);
 
     public static void changeFeatureInt(String featureName, int featureNum, int value) {
-        Preferences.with(context).writeInt(featureNum, value);
+        with(context).writeInt(featureNum, value);
         Changes(context, featureNum, featureName, value, false, null);
     }
 
     public static void changeFeatureString(String featureName, int featureNum, String str) {
-        Preferences.with(context).writeString(featureNum, str);
+        with(context).writeString(featureNum, str);
         Changes(context, featureNum, featureName, 0, false, str);
     }
 
     public static int changeFeatureBool(String featureName, int featureNum, boolean bool) {
-        Preferences.with(context).writeBoolean(featureNum, bool);
+        with(context).writeBoolean(featureNum, bool);
         return Changes(context, featureNum, featureName, 0, bool, null);
     }
 
     public static int loadPrefInt(String featureName, int featureNum) {
         if (loadPref) {
-            int i = Preferences.with(context).readInt(featureNum);
+            int i = with(context).readInt(featureNum);
             Changes(context, featureNum, featureName, i, false, null);
             return i;
         }
@@ -52,7 +52,7 @@ public class Preferences {
     }
 
     public static boolean loadPrefBool(String featureName, int featureNum, boolean bDef) {
-        boolean bool = Preferences.with(context).readBoolean(featureNum, bDef);
+        boolean bool = with(context).readBoolean(featureNum, bDef);
         if (featureNum == -1) {
             loadPref = bool;
         }
@@ -69,7 +69,7 @@ public class Preferences {
 
     public static String loadPrefString(String featureName, int featureNum) {
         if (loadPref || featureNum <= 0) {
-            String str = Preferences.with(context).readString(featureNum);
+            String str = with(context).readString(featureNum);
             Changes(context, featureNum, featureName, 0, false, str);
             return str;
         }

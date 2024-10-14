@@ -22,7 +22,7 @@ public final class CrashHandler {
 
     public static final UncaughtExceptionHandler DEFAULT_UNCAUGHT_EXCEPTION_HANDLER = Thread.getDefaultUncaughtExceptionHandler();
 
-    public static void init(final Context app, final boolean overlayRequired) {
+    public static void init(final Context context, final boolean overlayRequired) {
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 
             @Override
@@ -31,7 +31,6 @@ public final class CrashHandler {
                 try {
                     tryUncaughtException(thread, throwable);
                 } catch (Throwable e) {
-                    e.printStackTrace();
                     if (DEFAULT_UNCAUGHT_EXCEPTION_HANDLER != null)
                         DEFAULT_UNCAUGHT_EXCEPTION_HANDLER.uncaughtException(thread, throwable);
                     else
@@ -50,7 +49,7 @@ public final class CrashHandler {
                 if (Build.VERSION.SDK_INT >= 30) { //Android R. AIDE didn't support Build.VERSION_CODES.R
                     dirName = "/storage/emulated/0/Documents/";
                 } else {
-                    dirName = String.valueOf(app.getExternalFilesDir(null));
+                    dirName = String.valueOf(context.getExternalFilesDir(null));
                 }
 
                 File crashFile = new File(dirName, fileName);
@@ -58,7 +57,7 @@ public final class CrashHandler {
                 String versionName = "unknown";
                 long versionCode = 0;
                 try {
-                    PackageInfo packageInfo = app.getPackageManager().getPackageInfo(app.getPackageName(), 0);
+                    PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
                     versionName = packageInfo.versionName;
                     versionCode = Build.VERSION.SDK_INT >= 28 ? packageInfo.getLongVersionCode()
                             : packageInfo.versionCode;
@@ -90,8 +89,8 @@ public final class CrashHandler {
                 } catch (IOException ignored) {
                 }
 
-                Toast.makeText(app, "Game has crashed unexpectedly", Toast.LENGTH_LONG).show();
-                Toast.makeText(app, "Log saved to: " + String.valueOf(crashFile).replace("/storage/emulated/0/", ""), Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Game has crashed unexpectedly", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Log saved to: " + String.valueOf(crashFile).replace("/storage/emulated/0/", ""), Toast.LENGTH_LONG).show();
 
                 Log.e("AppCrash", "Done");
 

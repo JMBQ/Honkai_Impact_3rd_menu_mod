@@ -4,8 +4,10 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Application;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
@@ -88,8 +90,6 @@ public class Main extends Application {
         return (Context) createAppContextMethod.invoke(null, mainThreadObj, packageInfoObj);
     }
 
-
-    private static native void CheckOverlayPermission(Context context);
 
     @TargetApi(Build.VERSION_CODES.N)
     public static void copyAssetsFile(Context context, String assetsName, String elfPath) {
@@ -176,7 +176,7 @@ public class Main extends Application {
 
     private static void create_menu() {
         new Thread(() -> {
-            Activity activity;
+            Context activity;
             try {
                 do {
                     activity = getCurrentActivity();
@@ -187,7 +187,7 @@ public class Main extends Application {
             }
 
             //Log.i(TAG, "activity: " + activity);
-            CheckOverlayPermission(activity);
+            new Main().CheckOverlay_java(activity);
         }).start();
     }
 
@@ -197,26 +197,28 @@ public class Main extends Application {
         try {
             context = Main.getContext();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         if (context != null) {
+            CrashHandler.init(context, false);
             PmsHook.killPM(context);
             loadElf(context);
-            CrashHandler.init(context, false);
             create_menu();
         }
     }
 
     @TargetApi(Build.VERSION_CODES.M)
-    public void CheckOverlayPermission_java(Context context) {
+    public void CheckOverlay_java(Context context) {
         if (Build.VERSION.SDK_INT >= 23) {
             if (!Settings.canDrawOverlays(context)) {
-                Toast.makeText(context, "Overlay permission is required in order to show mod menu.",
-                        Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setAction(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                context.startActivity(intent);
+                return;
             }
         }
-
-        startService(new Intent(context, Launcher.class));
+        Intent intent = new Intent(context, Launcher.class);
+        context.startService(intent);
     }
 }

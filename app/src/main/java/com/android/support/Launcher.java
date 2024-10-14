@@ -61,8 +61,7 @@ public class Launcher extends Service {
         super.onTaskRemoved(intent);
         try {
             Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        } catch (InterruptedException ignored) {
         }
         stopSelf();
     }
