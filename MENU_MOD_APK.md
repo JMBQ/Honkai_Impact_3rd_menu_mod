@@ -1,8 +1,7 @@
 
-## Honkai Impact 3 menu mod v7.6.0
+## Honkai Impact 3 menu mod v7.7.0
 * SEA
 * GLOBAL
-* [Other please click here](https://androidrepublic.org/threads/honkai-impact-3-global-sea-jp-kr-tw-v7-3-0-mod.141396/)
 
 ## Device
 * 设备环境：安卓真机. 不支持模拟器和虚拟机(游戏官方会检测虚拟机)
@@ -16,10 +15,8 @@
 * Due to the difference in signature between the modified version and the official version, you need to uninstall the official version before you can install the modified version normally.
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
-* 完整测试了SEA，其他区服只测试启动游戏是否崩溃
-* 由于简中某些无耻之徒的贩卖行为，决定给与简中区域功能限制（要是有本事破解掉我的签名校验，我都会自认技不如人，不作限制。一颗老鼠屎坏了一锅汤，也就没公平可言了）
-* SEA has been fully tested, and other servers only test whether the game crashes at startup
-* Because the Simplified Chinese region appeared to sell behavior, the use of the Simplified Chinese region is restricted. basically the phone is not affected as long as it does not use a simplified Chinese rom
+* 只测试启动游戏是否崩溃
+* only test whether the game crashes at startup
 
 ## Download
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
