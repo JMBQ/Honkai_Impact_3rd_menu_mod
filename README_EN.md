@@ -5,7 +5,7 @@
 
 
 ## MENU APK
-* Continuously updated：[click here](MENU_MOD_APK.md)
+* Occasional updated：[click here](MENU_MOD_APK.md)
 
 
 ## Features
