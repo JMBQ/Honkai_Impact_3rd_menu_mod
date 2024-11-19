@@ -1,12 +1,12 @@
 
-## Honkai Impact 3 menu mod v7.7.0
+## Honkai Impact 3 menu mod v7.8.0
 * SEA
 * GLOBAL
 
 ## Device
-* 设备环境：安卓真机. 不支持模拟器和虚拟机(游戏官方会检测虚拟机)
+* 设备环境：安卓真机，模拟器（mumu12 64bit）
 * 安卓版本：安卓9以上
-* device : Android real phone. emulator and Virtual phone are not supported (the game officially detects virtual phone)
+* device : Android real phone and Android emulator（mumu12 64bit）
 * android version: 9 or higher
 ## Install
 * [Split APKs Installer](https://github.com/Aefyr/SAI/releases)
