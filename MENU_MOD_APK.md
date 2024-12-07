@@ -1,5 +1,5 @@
 
-## Honkai Impact 3 menu mod v7.8.0
+## Honkai Impact 3 menu mod v7.9.0
 * SEA
 * GLOBAL
 
@@ -17,6 +17,8 @@
 ## Notice
 * 只测试启动游戏是否崩溃
 * only test whether the game crashes at startup
+* Each time I need to update more than 20G of data, so I can't do functional testing
+* Try to fix the crash that would occur in android 14
 
 ## Download
 * [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
