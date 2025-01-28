@@ -1,7 +1,10 @@
 
-## Honkai Impact 3 menu mod v7.9.0
+## Honkai Impact 3 menu mod v100.0
 * SEA
 * GLOBAL
+* JP
+* KR
+* TW
 
 ## Device
 * 设备环境：安卓真机，模拟器（mumu12 64bit）
@@ -21,4 +24,4 @@
 * Try to fix the crash that would occur in android 14
 
 ## Download
-* [MEGA](https://mega.nz/folder/050zETLK#UgzRVAI00XcVUFAAaT0ppA)
+* [Release](https://github.com/JMBQ/Honkai_Impact_3rd_menu_mod/releases/tag/100.0)
