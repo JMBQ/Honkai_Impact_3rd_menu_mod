@@ -1,5 +1,5 @@
 
-## Honkai Impact 3 menu mod v100.0
+## Honkai Impact 3 mod menu
 * SEA
 * GLOBAL
 * JP
@@ -18,9 +18,6 @@
 * Due to the difference in signature between the modified version and the official version, you need to uninstall the official version before you can install the modified version normally.
 * Download the apks file, you need to use split APKs installer to select the apks file and install it
 ## Notice
-* 只测试启动游戏是否崩溃
-* only test whether the game crashes at startup
-* Each time I need to update more than 20G of data, so I can't do functional testing
 * Try to fix the crash that would occur in android 14
 
 ## Download
