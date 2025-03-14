@@ -73,10 +73,10 @@ jobjectArray GetFeatureList(JNIEnv *env, [[maybe_unused]] jobject context) {
 
     const char *features[] = {
 //            "Category_功能/the Category", //Not counted
-            "Toggle_满星 / always full star",
-            "Toggle_移速 / moveSpeed",
-            "Toggle_攻速 / attackSpeed",
-            "Toggle_能量 / get Multiplier SP",
+            "Toggle_features1",
+            "Toggle_features2",
+            "Toggle_features3",
+            "Toggle_features4",
 //            "100_Toggle_True_The toggle 2", //This one have feature number assigned, and switched on by default
 //            "110_Toggle_The toggle 3", //This one too
 //            "SeekBar_The slider_1_100",
