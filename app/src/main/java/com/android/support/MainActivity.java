@@ -1,5 +1,6 @@
 package com.android.support;
 
+import static com.android.support.Menu.TAG;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -13,7 +14,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class MainActivity extends Activity {
-    public static final String TAG = "JMBQ"; //Tag for logcat
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class MainActivity extends Activity {
         Context context = getApplicationContext();
         Log.i(TAG, "[onCreate] getGameOrigSignature: " +
                 getGameOrigSignature(context, context.getPackageName()));
+        System.loadLibrary("HI3");
+        Main.create_menu(getApplicationContext());
     }
 
     boolean getGameOrigSignature(Context context, String packageName) {

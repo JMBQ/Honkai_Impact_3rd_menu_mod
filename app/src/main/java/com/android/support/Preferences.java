@@ -1,5 +1,6 @@
 package com.android.support;
 
+import static com.android.support.Menu.TAG;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,7 +9,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Preferences {
-    private static final String TAG = "JMBQ";
     private static SharedPreferences sharedPreferences;
     @SuppressLint("StaticFieldLeak")
     private static Preferences prefsInstance;

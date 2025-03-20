@@ -1,14 +1,10 @@
 
 ## please translate by yourself
 悬浮窗生效范围：没有任何保护的app </br>
-自动查找生效前提：官方没有改动il2cpp相关的结构体 && il2cpp导出函数没有被隐藏 </br>
+自动查找生效前提：官方没有修改il2cpp相关的结构体 && il2cpp导出函数没有被隐藏 </br>
 
 
-
-
-
-
-* 生成 `app-release.apk`
+* 编译源码，生成 `app-release.apk`
     * 下载源码，使用android studio打开
     * 如果是局域网用户（CN），修改根目录下的build.gradle， 将CN version下面的注释取消掉，这样就可以使用阿里云镜像下载对应依赖库了
     * Generate Signed Bundle --> APK
@@ -26,12 +22,14 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     ```
     ![image](img/02.jpg)
-* 根据上条，打开`games`的smali目录, 编辑`android:name`指向的`smali`，找到`constructor <init>()V`这个方法（一般是第一个方法），在`.locals`的下一行插入代码`invoke-static {}, Lcom/android/support/Main;->Start()V` 
-* 将`games`重新编译成apk文件就完事了。
+* 根据上条，打开`games`的smali目录, 编辑`android:name`指向的`smali`，找到`constructor <init>()V`这个方法（一般是第一个方法），在`.locals`的下一行插入代码
+    ```
+    invoke-static {}, Lcom/android/support/Main;->Start()V
+    ``` 
+* 将`games`重新编译成mod apk
 
 ## 注意
 * 某些游戏可能存在游戏保护，当它发现游戏被篡改时，会第一时间杀掉游戏进程，导致游戏闪退。
     * 使用本项目导致游戏闪退，可能是存在游戏保护，自行搞定
-    * 我目前推荐使用重定向文件绕过游戏保护检测，对BI3生效
-    * 重定向代码其实在github里就有，由于倒卖狗的存在，我不能提供网址给你们，需要你们自行搜索
+    * 如何绕过游戏保护，这属于安全攻防问题，我不能透露，不然本项目里菜单apk可能就难产了
 

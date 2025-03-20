@@ -1,5 +1,6 @@
 package com.android.support;
 
+import static com.android.support.Menu.TAG;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;

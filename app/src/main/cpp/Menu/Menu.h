@@ -46,7 +46,7 @@ jstring IconWebViewData(JNIEnv *env, jobject thiz) {
     // return NULL
 
     //return env->NewStringUTF(OBFUSCATE_KEY("https://i.imgur.com/SujJ85j.gif", 'u'));
-    return NULL;
+    return nullptr;
 }
 
 jobjectArray SettingsList(JNIEnv *env, jobject activityObject) {

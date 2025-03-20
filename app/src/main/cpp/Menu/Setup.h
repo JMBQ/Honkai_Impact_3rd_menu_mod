@@ -3,6 +3,7 @@
 #include "Menu.h"
 #include "../log.h"
 
+
 namespace ToastLength {
     inline const int LENGTH_LONG = 1;
     inline const int LENGTH_SHORT = 0;

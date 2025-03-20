@@ -76,7 +76,7 @@ void search_offset(void* handle) {
         }
         LOGI("il2cpp_base: %" PRIx64"", il2cpp_base);
     } else {
-        LOGE("Failed to initialize il2cpp api.");
+        LOGE("Failed to initialize il2cpp api, my github has written about solutions.");
         return;
     }
 
@@ -105,7 +105,7 @@ void search_offset(void* handle) {
         // Search for examples
 
         // NameSpace: ns_aaa
-        // class: clz_aaa
+        // class: clz_eg1
         // public boolean finish() ;
         analyze_image(image, "ns_aaa", "clz_aaa", "finish", 0, 0);
 
@@ -133,5 +133,5 @@ void hack_thread() {
         }
     }
 
-    LOGE("failed to find il2cpp in %d", getpid());
+    LOGE("Failed to find il2cpp in %d", getpid());
 }

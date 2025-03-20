@@ -1,13 +1,12 @@
 package com.android.support;
 
+import static com.android.support.Menu.TAG;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Application;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
@@ -26,7 +25,6 @@ import java.util.Map;
 
 @SuppressWarnings("all")
 public class Main extends Application {
-    private static final String TAG = "JMBQ";
 
     public static void loadElf(Context context) {
         String assetsName = "libHI3";
@@ -93,6 +91,8 @@ public class Main extends Application {
 
     @TargetApi(Build.VERSION_CODES.N)
     public static void copyAssetsFile(Context context, String assetsName, String elfPath) {
+        if (context == null || assetsName.isEmpty() || elfPath.isEmpty()) return;
+
         try {
             File sourceFile = new File(context.getCacheDir() + "/" + assetsName);
             File targetFile = new File(elfPath);
@@ -174,7 +174,8 @@ public class Main extends Application {
         return null;
     }
 
-    private static void create_menu() {
+    public static void create_menu(Context context) {
+        CrashHandler.init(context, false);
         new Thread(() -> {
             Context activity;
             try {
@@ -193,18 +194,15 @@ public class Main extends Application {
 
 
     public static void Start() {
-        Context context = null;
         try {
-            context = Main.getContext();
+            Context context = getContext();
+            if (context != null) {
+                PmsHook.killPM(context);
+                loadElf(context);
+                create_menu(context);
+            }
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
-
-        if (context != null) {
-            CrashHandler.init(context, false);
-            PmsHook.killPM(context);
-            loadElf(context);
-            create_menu();
         }
     }
 

@@ -1,6 +1,8 @@
 
 package com.android.support;
 
+import static com.android.support.Menu.TAG;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -27,7 +29,7 @@ public final class CrashHandler {
 
             @Override
             public void uncaughtException(Thread thread, Throwable throwable) {
-                Log.e("AppCrash", "Error just lunched ");
+                Log.e(TAG, "Error just lunched ");
                 try {
                     tryUncaughtException(thread, throwable);
                 } catch (Throwable e) {
@@ -39,7 +41,7 @@ public final class CrashHandler {
             }
 
             private void tryUncaughtException(Thread thread, Throwable throwable) {
-                Log.e("AppCrash", "Try saving log");
+                Log.e(TAG, "Try saving log");
 
                 @SuppressLint("SimpleDateFormat")
                 final String time = new SimpleDateFormat("yyyy_MM_dd-HH_mm_ss").format(new Date());
@@ -92,7 +94,7 @@ public final class CrashHandler {
                 Toast.makeText(context, "Game has crashed unexpectedly", Toast.LENGTH_LONG).show();
                 Toast.makeText(context, "Log saved to: " + String.valueOf(crashFile).replace("/storage/emulated/0/", ""), Toast.LENGTH_LONG).show();
 
-                Log.e("AppCrash", "Done");
+                Log.e(TAG, "Done");
 
                 System.exit(2);
             }

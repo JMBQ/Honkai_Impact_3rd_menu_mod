@@ -16,4 +16,3 @@ public:
 
 int api_level();
 void hack_thread();
-const char *getCustomSign(JNIEnv *env, jobject context, const char* package_name);

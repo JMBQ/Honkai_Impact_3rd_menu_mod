@@ -27,7 +27,7 @@ HOOK_DEF(bool , full) {
 
 // NameSpace: ns_bbb
 // class: clz_bbb
-// public single getMoveSpeedRate(single ratio) ;
+// public single getMoveSpeedRate(single ratio);
 bool ms = false;
 HOOK_DEF(float, move, float ratio) {
     if (ms) {
@@ -61,7 +61,6 @@ HOOK_DEF(float, SP, float ratio) {
     }
 }
 
-
 // Do not change or translate the first text unless you know what you are doing
 // Assigning feature numbers is optional. Without it, it will automatically count for you, starting from 0
 // Assigned feature numbers can be like any numbers 1,3,200,10... instead in order 0,1,2,3,4,5...
@@ -72,7 +71,7 @@ jobjectArray GetFeatureList(JNIEnv *env, [[maybe_unused]] jobject context) {
     jobjectArray ret;
 
     const char *features[] = {
-//            "Category_功能/the Category", //Not counted
+//            "Category_the Category", //Not counted
             "Toggle_features1",
             "Toggle_features2",
             "Toggle_features3",
@@ -103,8 +102,6 @@ jobjectArray GetFeatureList(JNIEnv *env, [[maybe_unused]] jobject context) {
 //            "Collapse_Collapse 2_True",
 //            "CollapseAdd_SeekBar_The slider_1_100",
 //            "CollapseAdd_InputValue_Input number",
-
-            "RichTextView_https://github.com/JMBQ"
 //            "RichWebView_<html><head><style>body{color: white;}</style></head><body>"
 //                      "This is WebView, with REAL HTML support!"
 //                      "<div style=\"background-color: darkblue; text-align: center;\">Support CSS</div>"
@@ -124,7 +121,7 @@ jobjectArray GetFeatureList(JNIEnv *env, [[maybe_unused]] jobject context) {
     return (ret);
 }
 
-int Changes(JNIEnv*, jclass, jobject, jint featNum, jstring featName, jint value,
+int Changes(JNIEnv* env, jclass, jobject, jint featNum, jstring featName, jint value,
             jboolean boolean, jstring str) {
     static bool has_hook_method = false;
     static bool hook_0 = false;
@@ -133,20 +130,23 @@ int Changes(JNIEnv*, jclass, jobject, jint featNum, jstring featName, jint value
     static bool hook_3 = false;
     int result = -1;
 
+    LOGI("Feature name: %d - %s | Value: = %d | Bool: = %d | Text: = %s",
+         featNum,
+         env->GetStringUTFChars(featName, nullptr),
+         value,
+         boolean,
+         str != nullptr ? env->GetStringUTFChars(str, nullptr) : "");
+
     if (il2cpp_base < 0x8000) {
+        LOGE("il2cpp_base error");
         return -1;  //wait
     }
 
     if (!cheat[featNum].found) {
+        LOGE("Feature %d memory address not found", featNum);
         return 0;   //fail
     }
 
-//    //LOGI("Feature name: %d - %s | Value: = %d | Bool: = %d | Text: = %s",
-//         featNum,
-//         env->GetStringUTFChars(featName, nullptr),
-//         value,
-//         boolean,
-//         str != nullptr ? env->GetStringUTFChars(str, nullptr) : "");
     if (!has_hook_method) {
         if (cheat[0].offset > 0) {
             hook_0 = (DobbyHook((void *)(il2cpp_base + cheat[0].offset),
@@ -172,19 +172,19 @@ int Changes(JNIEnv*, jclass, jobject, jint featNum, jstring featName, jint value
     }
 
     switch (featNum) {
-        case 0: //full star
+        case 0:
             fs = boolean;
             result = hook_0;
             break;
-        case 1: //move speed
+        case 1:
             ms = boolean;
             result = hook_1;
             break;
-        case 2: //atk speed
+        case 2:
             as = boolean;
             result = hook_2;
             break;
-        case 3: //get Multiplier SP
+        case 3:
             sp = boolean;
             result = hook_3;
             break;
@@ -247,8 +247,7 @@ extern "C" JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *) {
         return JNI_ERR;
     }
 
-    std::thread t1(hack_thread);
-    t1.detach();
+    std::thread(hack_thread).detach();
 
     return JNI_VERSION_1_6;
 }
