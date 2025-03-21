@@ -38,7 +38,7 @@ public class Main extends Application {
         if (elfFile.exists()) {
             if (!elfFile.setExecutable(true)) {
                 Toast.makeText(context,
-                        "faild to set execute permission", Toast.LENGTH_LONG).show();
+                        "failed to set execute permission", Toast.LENGTH_LONG).show();
                 return;
             }
         } else {
